@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Countdown</title>
+</head>
+<body>
+
+<div class="counter-div"><ul><li><span id="days">255</span><small>days</small></li><li><span id="hours">15</span><small>Hours</small></li><li><span id="minutes">53</span><small>Minutes</small></li><li><span id="seconds">9</span><small>Seconds</small></li></ul></div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+      const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+  let countDown = new Date('June 01, 2020 03:00:00').getTime(),
+    x = setInterval(function() {
+
+        let now = new Date().getTime(),
+        distance = countDown - now;
+
+        document.getElementById('days').innerText = Math.floor(distance / (day)),
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+    }, second)
+  </script> 
