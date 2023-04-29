@@ -4,4 +4,4 @@
 
 <strong><strong style="font-size:50px"> Usage</strong></strong>
 
-<p style="font-size:26px"> Use the above html file directly </p>
+<p style="font-size:26px"> Use the above html file directly</p>
